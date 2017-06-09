@@ -1,0 +1,554 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for renderer/vuex/modules/timelines.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">all files</a> / <a href="index.html">renderer/vuex/modules/</a> timelines.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">4.17% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>3/72</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/36</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/19</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">4.84% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>3/62</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**
+ * Created by shuhei.hagiwara on 2017/05/05.
+ */
+import * as types from '../mutation-types'
+&nbsp;
+const state = {
+  timelineList: []
+}
+&nbsp;
+const helper = {
+  checkInvalidObj (payload) {
+<span class="cstat-no" title="statement not covered" >    return (payload === null || Object.keys(payload).length === 0 || payload === undefined)</span>
+  },
+  // Typeに一致する現在のTimelineのを取得
+  getMatchingTypeTL (state, type) {
+<span class="cstat-no" title="statement not covered" >    return state.timelineList.filter(tl =&gt; <span class="fstat-no" title="function not covered" >{</span></span>
+<span class="cstat-no" title="statement not covered" >      return tl.timelineType === type</span>
+    }).concat([])[0]
+  },
+  // タイムラインを比較し同じ内容であれば除外
+  excludeSameTL (currentTl, addTl) {
+    let currentUrlList = <span class="cstat-no" title="statement not covered" >currentTl.toots.map(toot =&gt; <span class="fstat-no" title="function not covered" >{ <span class="cstat-no" title="statement not covered" >return toot.url </span>})</span></span>
+<span class="cstat-no" title="statement not covered" >    addTl.toots = addTl.toots.filter(toot =&gt; <span class="fstat-no" title="function not covered" >{</span></span>
+<span class="cstat-no" title="statement not covered" >      return currentUrlList.indexOf(toot.url) === -1</span>
+    })
+<span class="cstat-no" title="statement not covered" >    return addTl</span>
+  },
+  // TimelineListにTootを追加
+  addTimelineList (currentTl, addTl) {
+<span class="cstat-no" title="statement not covered" >    currentTl.toots = currentTl.toots.concat(addTl.toots)</span>
+<span class="cstat-no" title="statement not covered" >    return currentTl</span>
+  },
+  // Tootを作成順に並び替え
+  sortToot (timeline) {
+<span class="cstat-no" title="statement not covered" >    timeline.toots = timeline.toots.sort((s1, s2) =&gt; <span class="fstat-no" title="function not covered" >{</span></span>
+<span class="cstat-no" title="statement not covered" >      return new Date(s2.createdAt) - new Date(s1.createdAt)</span>
+    })
+<span class="cstat-no" title="statement not covered" >    return timeline</span>
+  },
+  // Vuexで管理されたstateにTootを追加
+  commitTimeline (timeline, type) {
+<span class="cstat-no" title="statement not covered" >    state.timelineList.forEach(tl =&gt; <span class="fstat-no" title="function not covered" >{</span></span>
+<span class="cstat-no" title="statement not covered" >      if (tl.timelineType === type) <span class="cstat-no" title="statement not covered" >tl = timeline</span></span>
+    })
+  }
+}
+&nbsp;
+const mutations = {
+&nbsp;
+  /*
+   * @param {Timeline} payload
+   */
+  [types.ADD_TIMELINE] (state, payload) {
+<span class="cstat-no" title="statement not covered" >    if (payload === null || payload === undefined || Object.keys(payload).length === 0) <span class="cstat-no" title="statement not covered" >return</span></span>
+<span class="cstat-no" title="statement not covered" >    state.timelineList.push(payload)</span>
+  },
+  /* 更新があったタイムラインのstartId, endIdを置き換える(実態はTimeline毎置き換え)
+   * @param {Timeline} payload
+   */
+  [types.REPLACE_TIMELINE] (state, payload) {
+<span class="cstat-no" title="statement not covered" >    if (payload === null || payload === undefined || Object.keys(payload).length === 0) <span class="cstat-no" title="statement not covered" >return</span></span>
+<span class="cstat-no" title="statement not covered" >    state.timelineList = state.timelineList.map(tl =&gt; <span class="fstat-no" title="function not covered" >{</span></span>
+<span class="cstat-no" title="statement not covered" >      if (tl.timelineType === payload.timelineType) {</span>
+<span class="cstat-no" title="statement not covered" >        tl.instanceInTimeline.forEach((instance, i) =&gt; <span class="fstat-no" title="function not covered" >{</span></span>
+<span class="cstat-no" title="statement not covered" >          if (instance.url === payload.instanceInTimeline.url) {</span>
+<span class="cstat-no" title="statement not covered" >            tl.instanceInTimeline[i] = payload.instanceInTimeline</span>
+          }
+        })
+      }
+<span class="cstat-no" title="statement not covered" >      return tl</span>
+    })
+  },
+  /* タイムラインに表示するインスタンスを変更する
+   * @param {{
+   *  type: timeline.type(string)
+   *  urlList: [Timeline.instanceInTimeline.url(string)]
+   * }} payload
+   */
+  [types.MODIFY_INSTANCE] (state, payload) {
+<span class="cstat-no" title="statement not covered" >    state.timelineList = state.timelineList.map(tl =&gt; <span class="fstat-no" title="function not covered" >{</span></span>
+<span class="cstat-no" title="statement not covered" >      if (tl.timelineType === payload.type) {</span>
+<span class="cstat-no" title="statement not covered" >        tl = tl.toots.map(t =&gt; <span class="fstat-no" title="function not covered" >{</span></span>
+<span class="cstat-no" title="statement not covered" >          t.viewFlag = false</span>
+<span class="cstat-no" title="statement not covered" >          payload.urlList.forEach(url =&gt; <span class="fstat-no" title="function not covered" >{</span></span>
+<span class="cstat-no" title="statement not covered" >            if (url === t.instanceUrl) {</span>
+<span class="cstat-no" title="statement not covered" >              t.viewFlag = true</span>
+            }
+          })
+<span class="cstat-no" title="statement not covered" >          return t</span>
+        })
+      }
+<span class="cstat-no" title="statement not covered" >      return tl</span>
+    })
+  },
+  /* タイムラインに最新のタイムラインを追加する
+   * @param {{
+   *  type: timeline.type(string)
+   *  timeline: Timeline
+   * }} payload
+   */
+  [types.ADD_LATEST_TOOT] (state, payload) {
+<span class="cstat-no" title="statement not covered" >    if (payload === null || Object.keys(payload).length === 0 || payload === undefined) <span class="cstat-no" title="statement not covered" >return</span></span>
+    const latestTL = <span class="cstat-no" title="statement not covered" >payload.timeline</span>
+    const type = <span class="cstat-no" title="statement not covered" >payload.type</span>
+&nbsp;
+    // Typeに一致する現在のTimelineのを取得
+    const currentTl = <span class="cstat-no" title="statement not covered" >state.timelineList.filter(tl =&gt; <span class="fstat-no" title="function not covered" >{</span></span>
+<span class="cstat-no" title="statement not covered" >      return tl.timelineType === type</span>
+    }).concat([])[0]
+&nbsp;
+    // 現在のTimelineのUrlのリストを取得し、Add予定のタイムラインと同じUrlがあれば除外
+    let currentUrlList = <span class="cstat-no" title="statement not covered" >currentTl.toots.map(toot =&gt; <span class="fstat-no" title="function not covered" >{ <span class="cstat-no" title="statement not covered" >return toot.url </span>})</span></span>
+<span class="cstat-no" title="statement not covered" >    latestTL.toots = latestTL.toots.filter(toot =&gt; <span class="fstat-no" title="function not covered" >{</span></span>
+<span class="cstat-no" title="statement not covered" >      return currentUrlList.indexOf(toot.url) === -1</span>
+    })
+&nbsp;
+    // Vuexで管理しているTimelineListにTootを追加
+<span class="cstat-no" title="statement not covered" >    currentTl.toots = currentTl.toots.concat(latestTL.toots)</span>
+&nbsp;
+    // Tootの作成順に並び替え
+<span class="cstat-no" title="statement not covered" >    currentTl.toots = currentTl.toots.sort((s1, s2) =&gt; <span class="fstat-no" title="function not covered" >{</span></span>
+<span class="cstat-no" title="statement not covered" >      return new Date(s2.createdAt) - new Date(s1.createdAt)</span>
+    })
+&nbsp;
+    // endIdを最新化
+<span class="cstat-no" title="statement not covered" >    currentTl.instanceInTimeline.forEach(stateInstance =&gt; <span class="fstat-no" title="function not covered" >{</span></span>
+<span class="cstat-no" title="statement not covered" >      latestTL.instanceInTimeline.forEach(latestInstance =&gt; <span class="fstat-no" title="function not covered" >{</span></span>
+<span class="cstat-no" title="statement not covered" >        if (latestInstance.url === stateInstance.url) <span class="cstat-no" title="statement not covered" >stateInstance.endId = latestInstance.endId</span></span>
+      })
+    })
+&nbsp;
+    // Vuexで管理されたstateにTootを追加
+<span class="cstat-no" title="statement not covered" >    state.timelineList.forEach(tl =&gt; <span class="fstat-no" title="function not covered" >{</span></span>
+<span class="cstat-no" title="statement not covered" >      if (tl.timelineType === type) <span class="cstat-no" title="statement not covered" >tl = currentTl</span></span>
+    })
+  },
+  [types.ADD_NEWER_TOOT] (state, payload) {
+    // state.timelineList =
+  },
+  [types.ADD_OLDER_TOOT] (state, payload) {
+<span class="cstat-no" title="statement not covered" >    if (helper.checkInvalidObj(payload)) <span class="cstat-no" title="statement not covered" >return</span></span>
+    let addTl = <span class="cstat-no" title="statement not covered" >payload.timeline</span>
+    const type = <span class="cstat-no" title="statement not covered" >payload.type</span>
+&nbsp;
+    let stateTl = <span class="cstat-no" title="statement not covered" >helper.getMatchingTypeTL(state, type)</span>
+<span class="cstat-no" title="statement not covered" >    addTl = helper.excludeSameTL(stateTl, addTl)</span>
+<span class="cstat-no" title="statement not covered" >    stateTl = helper.addTimelineList(stateTl, addTl)</span>
+<span class="cstat-no" title="statement not covered" >    stateTl = helper.sortToot(stateTl)</span>
+&nbsp;
+    // startIdを最新化
+<span class="cstat-no" title="statement not covered" >    stateTl.instanceInTimeline.forEach(stateInstance =&gt; <span class="fstat-no" title="function not covered" >{</span></span>
+<span class="cstat-no" title="statement not covered" >      addTl.instanceInTimeline.forEach(olderInstance =&gt; <span class="fstat-no" title="function not covered" >{</span></span>
+<span class="cstat-no" title="statement not covered" >        if (olderInstance.url === stateInstance.url) <span class="cstat-no" title="statement not covered" >stateInstance.startId = olderInstance.startId</span></span>
+      })
+    })
+<span class="cstat-no" title="statement not covered" >    helper.commitTimeline(stateTl, type)</span>
+  }
+}
+&nbsp;
+export default {
+  state,
+  mutations
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Jun 09 2017 14:08:43 GMT+0900 (JST)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for renderer/model/mastodon.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">renderer/model/</a> mastodon.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">13.46% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>7/52</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/18</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/19</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">14.58% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>7/48</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**
+ * Created by shuhei.hagiwara on 2017/05/01.
+ */
+&nbsp;
+import axios from 'axios'
+&nbsp;
+const PUBLIC_URL = '/public/'
+const HOME_URL = '/home/'
+const LOCAL_URL = 'local=true'
+const LIMIT_40 = 'limit=40'
+&nbsp;
+const PUBLIC_TYPE = 'Public'
+const HOME_TYPE = 'Home'
+const LOCAL_TYPE = 'Local'
+&nbsp;
+export default class Mastodon {
+  constructor (timeout) <span class="fstat-no" title="function not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >    this.timelineUrl = '/api/v1/timelines'</span>
+<span class="cstat-no" title="statement not covered" >    this.permittedInstance = JSON.parse(localStorage.getItem('mastodon-config'))</span>
+<span class="cstat-no" title="statement not covered" >    this.timeout_ms = timeout || 60 * 1000</span>
+  }
+&nbsp;
+  /*
+   *
+   *@return {Mixed(promise|array)}
+  */
+  fetchHomeTimelines () <span class="fstat-no" title="function not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >    return this.fetchLatestTimeline(HOME_TYPE)</span>
+  }
+&nbsp;
+  fetchLocalTimelines () <span class="fstat-no" title="function not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >    return this.fetchLatestTimeline(LOCAL_TYPE)</span>
+  }
+&nbsp;
+  fetchPublicTimelines () <span class="fstat-no" title="function not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >    return this.fetchLatestTimeline(PUBLIC_TYPE)</span>
+  }
+&nbsp;
+  fetchOlderHomeTimelines (startIdList) <span class="fstat-no" title="function not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >    return this.fetchOlderTimeline(startIdList, HOME_TYPE)</span>
+  }
+&nbsp;
+  fetchOlderLocalTimelines (startIdList) <span class="fstat-no" title="function not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >    return this.fetchOlderTimeline(startIdList, LOCAL_TYPE)</span>
+  }
+&nbsp;
+  fetchOlderPublicTimelines (startIdList) <span class="fstat-no" title="function not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >    return this.fetchOlderTimeline(startIdList, PUBLIC_TYPE)</span>
+  }
+&nbsp;
+  fetchLatestTimeline (typeFlag) <span class="fstat-no" title="function not covered" >{</span>
+    let funcArray = <span class="cstat-no" title="statement not covered" >[]</span>
+<span class="cstat-no" title="statement not covered" >    this.permittedInstance.forEach(instance =&gt; <span class="fstat-no" title="function not covered" >{</span></span>
+      const url = <span class="cstat-no" title="statement not covered" >instance.baseUrl + this.timelineUrl</span>
+<span class="cstat-no" title="statement not covered" >      if (typeFlag === HOME_TYPE) {</span>
+        const reqOpts = <span class="cstat-no" title="statement not covered" >this.getOpts(instance)</span>
+        const getUrlStr = <span class="cstat-no" title="statement not covered" >url + HOME_URL + '?' + LIMIT_40</span>
+<span class="cstat-no" title="statement not covered" >        funcArray.push(axios.create(reqOpts).get(getUrlStr))</span>
+      } else {
+        const getUrlStr = <span class="cstat-no" title="statement not covered" >typeFlag === PUBLIC_TYPE ? url + PUBLIC_URL + '?' + LIMIT_40 : url + PUBLIC_URL + '?' + LIMIT_40 + '&amp;' + LOCAL_URL</span>
+<span class="cstat-no" title="statement not covered" >        funcArray.push(axios.get(getUrlStr))</span>
+      }
+    })
+<span class="cstat-no" title="statement not covered" >    return axios.all(funcArray).then(res =&gt; <span class="fstat-no" title="function not covered" >{ <span class="cstat-no" title="statement not covered" >return this.getDataObject(res) </span>})</span></span>
+  }
+&nbsp;
+  fetchOlderTimeline (startIdList, typeFlag) <span class="fstat-no" title="function not covered" >{</span>
+    let funcArray = <span class="cstat-no" title="statement not covered" >[]</span>
+<span class="cstat-no" title="statement not covered" >    this.permittedInstance.forEach(instance =&gt; <span class="fstat-no" title="function not covered" >{</span></span>
+      const url = <span class="cstat-no" title="statement not covered" >instance.baseUrl + this.timelineUrl</span>
+<span class="cstat-no" title="statement not covered" >      if (typeFlag === HOME_TYPE) {</span>
+        const reqOpts = <span class="cstat-no" title="statement not covered" >this.getOpts(instance)</span>
+        const startIdObj = <span class="cstat-no" title="statement not covered" >startIdList.filter(s =&gt; <span class="fstat-no" title="function not covered" >{</span></span>
+<span class="cstat-no" title="statement not covered" >          return instance.baseUrl === s.url</span>
+        })[0]
+<span class="cstat-no" title="statement not covered" >        if (startIdObj === undefined || startIdObj === null) <span class="cstat-no" title="statement not covered" >return</span></span>
+        const getUrlStr = <span class="cstat-no" title="statement not covered" >url + HOME_URL + '?' + LIMIT_40 + '&amp;' + 'max_id=' + startIdObj.startId</span>
+<span class="cstat-no" title="statement not covered" >        funcArray.push(axios.create(reqOpts).get(getUrlStr))</span>
+      } else {
+        const startIdObj = <span class="cstat-no" title="statement not covered" >startIdList.filter(s =&gt; <span class="fstat-no" title="function not covered" >{</span></span>
+<span class="cstat-no" title="statement not covered" >          return instance.baseUrl === s.url</span>
+        })[0]
+<span class="cstat-no" title="statement not covered" >        if (startIdObj === undefined || startIdObj === null) <span class="cstat-no" title="statement not covered" >return</span></span>
+        const getUrlStr = <span class="cstat-no" title="statement not covered" >typeFlag === PUBLIC_TYPE ? url + PUBLIC_URL + '?' + LIMIT_40 + '&amp;' + 'max_id=' + startIdObj.startId : url + PUBLIC_URL + '?' + LIMIT_40 + '&amp;' + LOCAL_TYPE + '&amp;' + 'max_id=' + startIdObj.startId</span>
+<span class="cstat-no" title="statement not covered" >        funcArray.push(axios.get(getUrlStr))</span>
+      }
+    })
+<span class="cstat-no" title="statement not covered" >    return axios.all(funcArray).then(res =&gt; <span class="fstat-no" title="function not covered" >{ <span class="cstat-no" title="statement not covered" >return this.getDataObject(res) </span>})</span></span>
+  }
+&nbsp;
+  getDataObject (res) <span class="fstat-no" title="function not covered" >{</span>
+    const mergeTimeline = <span class="cstat-no" title="statement not covered" >res.map(resObj =&gt; <span class="fstat-no" title="function not covered" >{</span></span>
+<span class="cstat-no" title="statement not covered" >      resObj.data.forEach(toot =&gt; <span class="fstat-no" title="function not covered" >{</span></span>
+<span class="cstat-no" title="statement not covered" >        toot.instanceUrl = resObj.request.responseURL.match(/https:\/\/[a-zA-Z0-9.]+/)[0]</span>
+      })
+<span class="cstat-no" title="statement not covered" >      return resObj.data</span>
+    })
+<span class="cstat-no" title="statement not covered" >    return mergeTimeline</span>
+  }
+&nbsp;
+  getOpts (instance) <span class="fstat-no" title="function not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >    return {</span>
+      headers: {
+        'Accept': '*/*',
+        'Authorization': 'Bearer ' + instance.accessToken
+      },
+      gzip: true,
+      encoding: null,
+      timeout: this.timeout_ms
+    }
+  }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Jun 09 2017 14:08:43 GMT+0900 (JST)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

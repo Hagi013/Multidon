@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for renderer/model/timeline/timeline.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">all files</a> / <a href="index.html">renderer/model/timeline/</a> timeline.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/37</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/11</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/17</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/35</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**
+ * Created by shuhei.hagiwara on 2017/05/05.
+ */
+&nbsp;
+import Toot from './toot'
+import InstancePreferences from '../setting/instancePreference'
+&nbsp;
+export default class timeline {
+  constructor (type, tootlines) <span class="fstat-no" title="function not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >    this._timelineType = type || ''</span>
+<span class="cstat-no" title="statement not covered" >    this._toots = this.instantiateToots(this.shapeToot(tootlines))</span>
+<span class="cstat-no" title="statement not covered" >    this._instanceInTimeline = this.calcInstanceInfo(tootlines)</span>
+  }
+&nbsp;
+  get timelineType () <span class="fstat-no" title="function not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >    return this._timelineType</span>
+  }
+&nbsp;
+  get toots () <span class="fstat-no" title="function not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >    return this._toots</span>
+  }
+&nbsp;
+  get instanceInTimeline () <span class="fstat-no" title="function not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >    return this._instanceInTimeline</span>
+  }
+&nbsp;
+  set timelineType (target) <span class="fstat-no" title="function not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >    this._timelineType = target</span>
+  }
+&nbsp;
+  set toots (target) <span class="fstat-no" title="function not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >    this._toots = target</span>
+  }
+&nbsp;
+  set instanceInTimeline (target) <span class="fstat-no" title="function not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >    return this._instanceInTimeline</span>
+  }
+&nbsp;
+  /*
+   * @param {[...[...Object]]} tootlines
+   *
+  */
+  shapeToot (tootlines) <span class="fstat-no" title="function not covered" >{</span>
+    let mergeTimeline = <span class="cstat-no" title="statement not covered" >[]</span>
+<span class="cstat-no" title="statement not covered" >    console.log('shapeToot', tootlines)</span>
+<span class="cstat-no" title="statement not covered" >    tootlines.forEach(tootLine =&gt; <span class="fstat-no" title="function not covered" >{</span></span>
+<span class="cstat-no" title="statement not covered" >      mergeTimeline = mergeTimeline.concat(tootLine)</span>
+    })
+    // タイムラインのソート
+<span class="cstat-no" title="statement not covered" >    mergeTimeline = mergeTimeline.sort((e1, e2) =&gt; <span class="fstat-no" title="function not covered" >{</span></span>
+<span class="cstat-no" title="statement not covered" >      return new Date(e2.created_at) - new Date(e1.created_at)</span>
+    })
+    // 同じUriのトートがあった場合削除
+    let selfUris = <span class="cstat-no" title="statement not covered" >mergeTimeline.map(t =&gt; <span class="fstat-no" title="function not covered" >{ <span class="cstat-no" title="statement not covered" >return t.uri </span>})</span></span>
+    let shapedTimeline = <span class="cstat-no" title="statement not covered" >mergeTimeline.filter((e, i) =&gt; <span class="fstat-no" title="function not covered" >{</span></span>
+<span class="cstat-no" title="statement not covered" >      return selfUris.indexOf(e.uri) === i</span>
+    })
+<span class="cstat-no" title="statement not covered" >    console.log('shapedTimeline', shapedTimeline.length)</span>
+<span class="cstat-no" title="statement not covered" >    return shapedTimeline</span>
+  }
+&nbsp;
+  instantiateToots (tootLinesObj) <span class="fstat-no" title="function not covered" >{</span>
+    let toots = <span class="cstat-no" title="statement not covered" >[]</span>
+<span class="cstat-no" title="statement not covered" >    tootLinesObj.forEach(o =&gt; <span class="fstat-no" title="function not covered" >{</span></span>
+      // if (o.content === `&lt;p&gt;&lt;/p&gt;`) return
+<span class="cstat-no" title="statement not covered" >      toots.push(new Toot(o))</span>
+    })
+<span class="cstat-no" title="statement not covered" >    return toots</span>
+  }
+&nbsp;
+  calcInstanceInfo (tootlines) <span class="fstat-no" title="function not covered" >{</span>
+    let instanceInTimeline = <span class="cstat-no" title="statement not covered" >[]</span>
+    const instanceLocalUrl = <span class="cstat-no" title="statement not covered" >new InstancePreferences().instancePreferecesFromLocalStorage().getIncetanceUrlArray()</span>
+<span class="cstat-no" title="statement not covered" >    tootlines.forEach(tl =&gt; <span class="fstat-no" title="function not covered" >{</span></span>
+<span class="cstat-no" title="statement not covered" >      if (tl[0] === undefined || tl[0] === null || Object.keys(tl[0]).length === 0) <span class="cstat-no" title="statement not covered" >return</span></span>
+      let instanceInfo = <span class="cstat-no" title="statement not covered" >{</span>
+        url: tl[0].instanceUrl,
+        startId: tl[0].id,
+        endId: tl[0].id
+      }
+<span class="cstat-no" title="statement not covered" >      tl.forEach(t =&gt; <span class="fstat-no" title="function not covered" >{</span></span>
+<span class="cstat-no" title="statement not covered" >        instanceInfo.url = instanceInfo.url === '' ? instanceLocalUrl.indexOf(t.url.match(/https:\/\/[a-zA-Z0-9.]+/)[0]) !== -1 ? t.url.match(/https:\/\/[a-zA-Z0-9.]+/)[0] : '' : instanceInfo.url</span>
+<span class="cstat-no" title="statement not covered" >        instanceInfo.startId = Math.min(instanceInfo.startId, t.id)</span>
+<span class="cstat-no" title="statement not covered" >        instanceInfo.endId = Math.max(instanceInfo.endId, t.id)</span>
+      })
+<span class="cstat-no" title="statement not covered" >      instanceInTimeline.push(instanceInfo)</span>
+    })
+<span class="cstat-no" title="statement not covered" >    return instanceInTimeline</span>
+  }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Jun 09 2017 14:08:43 GMT+0900 (JST)
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

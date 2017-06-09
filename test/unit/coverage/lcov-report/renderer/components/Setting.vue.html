@@ -1,0 +1,443 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for renderer/components/Setting.vue</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">renderer/components/</a> Setting.vue
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/33</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/23</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/5</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/30</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">&lt;template&gt;
+  &lt;div id="setting"&gt;
+    &lt;button v-on:click="to_landing"&gt;go to landing&lt;/button&gt;
+    &lt;div&gt;インスタンスの追加&lt;/div&gt;
+    &lt;input v-model="instance_url" placeholder="Instance Url"&gt;
+    &lt;button v-on:click="get_code"&gt;get code&lt;/button&gt;
+    &lt;input v-model="code" placeholder="input code"&gt;
+    &lt;button v-on:click="get_access_token"&gt;get Access Token&lt;/button&gt;
+    &lt;CurrentPage&gt;&lt;/CurrentPage&gt;
+    &lt;div&gt;
+      &lt;table&gt;
+        &lt;thead&gt;
+          &lt;tr&gt;
+            &lt;th&gt;Instance&lt;/th&gt;
+          &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+          &lt;tr v-for="conf in confs"&gt;
+            &lt;td&gt;{{ conf }}&lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/tbody&gt;
+      &lt;/table&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+&lt;script&gt;
+import router from '../routes'
+import CurrentPage from './LandingPageView/CurrentPage.vue'
+import MastodonAuth from '../model/mastodonAuth'
+&nbsp;
+export default {
+  name: 'setting-page',
+  data () {
+<span class="cstat-no" title="statement not covered" >    return {</span>
+      mastodonAuth: new MastodonAuth(),
+      instance_url: null,
+      code: '',
+      confs: Object.keys(JSON.parse(localStorage.getItem('mastodon-config'))).map(e =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >Object.keys(JSON.parse(localStorage.getItem('mastodon-config'))[e]))</span></span>.map(a =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >a[0])</span></span>
+    }
+  },
+  methods: {
+    to_landing () {
+<span class="cstat-no" title="statement not covered" >      router.push('/')</span>
+    },
+    get_code () {
+<span class="cstat-no" title="statement not covered" >      if (this.instance_url !== null &amp;&amp; this.instance_url !== '' || this.instance_url !== undefined) {</span>
+<span class="cstat-no" title="statement not covered" >        this.mastodonAuth = new MastodonAuth(this.instance_url)</span>
+      }
+<span class="cstat-no" title="statement not covered" >      if (this.instance_url !== '' &amp;&amp; this.instance_url !== null &amp;&amp; this.instance_url !== undefined) {</span>
+<span class="cstat-no" title="statement not covered" >        this.mastodonAuth.createCode(this.instance_url)</span>
+      } else {
+<span class="cstat-no" title="statement not covered" >        this.mastodonAuth.createCode()</span>
+      }
+    },
+    async get_access_token () {
+<span class="cstat-no" title="statement not covered" >      this.mastodonAuth = await this.mastodonAuth.getAccessToken(this.code)</span>
+<span class="cstat-no" title="statement not covered" >      console.log('this.mastodonAuth', this.mastodonAuth)</span>
+<span class="cstat-no" title="statement not covered" >      this.set_local_storage()</span>
+    },
+    set_local_storage () {
+<span class="cstat-no" title="statement not covered" >      if (Object.keys(this.mastodonAuth).length === 0 || this.mastodonAuth === undefined || this.mastodonAuth === null) <span class="cstat-no" title="statement not covered" >return</span></span>
+      let conf = <span class="cstat-no" title="statement not covered" >{}</span>
+      const savedConfs = <span class="cstat-no" title="statement not covered" >JSON.parse(localStorage.getItem('mastodon-config'))</span>
+      // mastodonのインスタンスに関わるaccessTokenなどがすでに登録されているかのチェック
+<span class="cstat-no" title="statement not covered" >      if (savedConfs !== null &amp;&amp; savedConfs !== undefined) {</span>
+        // mastodonのインスタンス情報が重複している場合(更新の場合)
+        let baseUrlArray = <span class="cstat-no" title="statement not covered" >Object.keys(savedConfs).map(e =&gt; <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >savedConfs[e].baseUrl)</span></span></span>
+<span class="cstat-no" title="statement not covered" >        if (baseUrlArray.indexOf(this.mastodonAuth.baseUrl) &gt;= 0) {</span>
+          const confs = <span class="cstat-no" title="statement not covered" >savedConfs.concat()</span>
+<span class="cstat-no" title="statement not covered" >          confs.forEach(e =&gt; <span class="fstat-no" title="function not covered" >{</span></span>
+<span class="cstat-no" title="statement not covered" >            if (e.baseUrl === this.mastodonAuth.baseUrl) {</span>
+<span class="cstat-no" title="statement not covered" >              e.clientId = this.mastodonAuth.clientId</span>
+<span class="cstat-no" title="statement not covered" >              e.clientSecret = this.mastodonAuth.clientSecret</span>
+<span class="cstat-no" title="statement not covered" >              e.accessToken = this.mastodonAuth.accessToken</span>
+            }
+          })
+<span class="cstat-no" title="statement not covered" >          localStorage.setItem('mastodon-config', JSON.stringify(confs))</span>
+        } else { // 追加登録の場合
+<span class="cstat-no" title="statement not covered" >          conf = {</span>
+            baseUrl: this.mastodonAuth.baseUrl,
+            clientId: this.mastodonAuth.clientId,
+            clientSecret: this.mastodonAuth.clientSecret,
+            accessToken: this.mastodonAuth.accessToken
+          }
+<span class="cstat-no" title="statement not covered" >          savedConfs.push(conf)</span>
+<span class="cstat-no" title="statement not covered" >          localStorage.setItem('mastodon-config', JSON.stringify(savedConfs))</span>
+        }
+      } else { // 初めての登録の場合
+<span class="cstat-no" title="statement not covered" >        conf = {</span>
+          baseUrl: this.mastodonAuth.baseUrl,
+          clientId: this.mastodonAuth.clientId,
+          clientSecret: this.mastodonAuth.clientSecret,
+          accessToken: this.mastodonAuth.accessToken
+        }
+<span class="cstat-no" title="statement not covered" >        console.log('OK', conf)</span>
+<span class="cstat-no" title="statement not covered" >        localStorage.setItem('mastodon-config', JSON.stringify([conf]))</span>
+      }
+    }
+  },
+  mounted: () =&gt; <span class="fstat-no" title="function not covered" >{},</span>
+  components: {
+    CurrentPage
+  }
+}
+&nbsp;
+&lt;/script&gt;
+&lt;style scoped&gt;
+img {
+    margin-top: -25px;
+    width: 450px;
+}
+body {
+    align-items: center;
+    background:
+      radial-gradient(
+        ellipse at center,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(229, 229, 229, .85) 100%
+    );
+    background-position: center;
+    display: flex;
+    font-family: Lato, Helvetica, sans-serif;
+    justify-content: center;
+    text-align: center;
+}
+&lt;/style&gt;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Jun 09 2017 14:08:43 GMT+0900 (JST)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>
