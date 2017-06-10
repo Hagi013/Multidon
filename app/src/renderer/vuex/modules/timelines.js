@@ -154,6 +154,18 @@ const mutations = {
       })
     })
     helper.commitTimeline(stateTl, type)
+  },
+  [types.MUTATE_VISIBILITY] (state, payload) {
+    const urlList = payload.urlList
+    const type = payload.type
+    state.timelineList.filter(tl => tl.timelineType === type)[0].toots
+      .forEach(t => {
+        if (urlList.indexOf(t.instanceUrl) === -1) {
+          t.viewFlag = false
+        } else {
+          t.viewFlag = true
+        }
+      })
   }
 }
 

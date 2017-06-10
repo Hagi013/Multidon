@@ -53,3 +53,7 @@ export const fetchOldTimelines = async ({ commit, getters }, type) => {
 export const addTimeline = ({ commit }, timeline) => {
   commit(types.ADD_TIMELINE, timeline)
 }
+
+export const mutateTootVisibility = ({ commit }, payload) => {
+  commit(types.MUTATE_VISIBILITY, payload)
+}

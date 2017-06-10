@@ -51,7 +51,6 @@ export default class Mastodon {
   fetchLatestTimeline (typeFlag) {
     let funcArray = []
     this.permittedInstance.forEach(instance => {
-
       const url = instance.baseUrl + this.timelineUrl
 
       if (typeFlag === HOME_TYPE) {
@@ -59,9 +58,7 @@ export default class Mastodon {
 
         const getUrlStr = url + HOME_URL + '?' + LIMIT_40
         funcArray.push(axios.create(reqOpts).get(getUrlStr))
-
       } else {
-
         const getUrlStr = typeFlag === PUBLIC_TYPE ? url + PUBLIC_URL + '?' + LIMIT_40 : url + PUBLIC_URL + '?' + LIMIT_40 + '&' + LOCAL_URL
         funcArray.push(axios.get(getUrlStr))
       }
@@ -84,9 +81,7 @@ export default class Mastodon {
         if (startIdObj === undefined || startIdObj === null) return
         const getUrlStr = url + HOME_URL + '?' + LIMIT_40 + '&' + 'max_id=' + startIdObj.startId
         funcArray.push(axios.create(reqOpts).get(getUrlStr))
-
       } else {
-
         const startIdObj = startIdList.filter(s => {
           return instance.baseUrl === s.url
         })[0]

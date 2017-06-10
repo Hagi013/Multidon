@@ -1,5 +1,5 @@
 <template>
-  <div id="toot">
+  <div id="toot" v-if="toot.viewFlag">
     <ul>
       <div class="toot">
         <table>
@@ -42,6 +42,7 @@
           </td>
           <hr />
         </table>
+        <hr />
       </div>
     </ul>
   </div>
